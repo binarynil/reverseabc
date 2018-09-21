@@ -6,12 +6,14 @@ void isEmpty(FILE *f);
 
 int main(int argc, char **argv) {
     FILE *input = fopen(argv[1], "r");
-    char buffer[26];
+    char buffer[40];
+
+    isEmpty(input);
     
-    fgets(buffer, 26, input);
+    fgets(buffer, 40, input);
 
     int i;
-    for(i = 0; i < 26; i++) {
+    for(i = 0; i < 40; i++) {
 	printLetter(&buffer[i]);
     }
     printf("\n");
